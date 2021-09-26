@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Microblog</title>
+  <title>The Data Blog</title>
   <link rel="stylesheet" href="/static/css/styles.css" />
 </head>
 <body>
   <header class="navbar">
     <div class="navbar__brand">
-      <img class="navbar__logo" src="/static/logo.svg" alt="The Microblog logo" />The Data Blog
+      <img class="navbar__logo" src="/static/logo.svg" alt="The Blog logo" />The Data Blog
     </div>
     <ul class="navbar__navigation">
       <li class="navbar__navigation-item">
@@ -37,7 +37,7 @@
         <article class="entry">
           <div>
             <h2 class="entry__title">{{ entry[0] | truncate(30, true) }}</h2>
-            <time class="entry__date" datetime="{{ entry[1] }}">• {{ entry[2] }}</time>
+            <time class="entry__date" datetime="{{ entry[1] }}">| {{ entry[2] }}</time>
           </div>
           <p class="entry__content">
             {{ entry[0] }}
@@ -54,12 +54,12 @@
       </section>
       <section class="right">
         <div class="footer__column">
-          <a class="footer__item">Recent</a>
-          <a class="footer__item">Calendar</a>
+          <a class="footer__item" href='#'>Recent</a>
+          <a class="footer__item" href='#'>Calendar</a>
         </div>
         <div class="footer__column">
           <a class="footer__item" href="#">About</a>
-          <a class="footer__item">How this was made</a>
+          <a class="footer__item" href='#'>How this was made</a>
         </div>
       </section>
     </div>
