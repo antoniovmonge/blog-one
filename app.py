@@ -9,10 +9,11 @@ load_dotenv()
 def create_app():
     app = Flask(__name__)
     client = MongoClient(os.environ.get("MONGODB_URI"))
-    app.db = client.microblog
+    app.db = client.blog
 
     @app.route("/", methods=["GET", "POST"])
     def home():
+        print([e for e in app.db.entries.find({})])
         if request.method == "POST":
             entry_content = request.form.get("content")
             formatted_date = datetime.datetime.today().strftime("%Y-%m-%d")
